@@ -25,7 +25,7 @@ function SignupForm() {
 
   function formSubmit(e: React.FormEvent) {
     if (password.length < 7) e.preventDefault();
-    //   onSubmit.propsOnSubmit({ propsEmail: email, propsPassword: password });
+    onSubmit.propsOnSubmit({ propsEmail: email, propsPassword: password });
   }
 
   return (
