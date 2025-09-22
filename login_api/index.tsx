@@ -1,4 +1,6 @@
 import { useState } from "react";
+
+//Class to give the structure to the parameter
 interface props {
   propsOnSubmit: (data: { propsEmail: string; propsPassword: string }) => void;
 }
@@ -8,6 +10,8 @@ function SignupForm() {
   const [password, setPassword] = useState("");
   let [emailError, setEmailError] = useState("");
   let [passwordError, setPasswordError] = useState("");
+
+  //Validates the input fields and shows an error if invalid
   function validate(type: string) {
     if (type === "email") {
       if (!email.includes("@") || !email.includes(".")) {
