@@ -1,0 +1,6 @@
+SELECT product_id, SUM(oi.quantity) * oi.unit_price AS revenue, SUM(quantity), unit_price
+FROM orders o
+LEFT JOIN order_items oi ON oi.order_id = o.id
+GROUP BY oi.product_id
+ORDER BY oi.product_id DESC
+LIMIT 3
