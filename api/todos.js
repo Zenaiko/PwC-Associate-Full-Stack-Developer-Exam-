@@ -1,10 +1,3 @@
-//1. REST Endpoint: Create Todo (Node + Express)
-// Implement a POST /api/todos that do the following:
-// - Validates body, where title is non-empty
-// - Creates an in-memory todo {id,title,done,createdAT}
-// - Returns 201 whith the created todo.
-// - Invalid Input, return 400 with {error code}
-
 //Dependencies
 const express = require("express");
 const app = express.Router();
